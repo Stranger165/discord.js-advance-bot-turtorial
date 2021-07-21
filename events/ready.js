@@ -1,7 +1,9 @@
-const client = require("../index")
-const prefix = require("../config").prefix
+const client = require("../index");
+const chalk = require(`chalk`);
 
-client.on('ready', () => {
-    client.user.setActivity(`${prefix}help`)
-    console.log(`${client.user.username} ✅`)
-})
+client.on("ready", () => {
+  console.log(
+    chalk.cyan("[Information] ") +
+      chalk.blue(`${client.user.tag} is now online!`)
+  );
+});
