@@ -1,4 +1,5 @@
 {
     "token": "paste your token",
-    "prefix": ">"
+    "prefix": ">",
+    "mongo": "your mongourl"
 }
