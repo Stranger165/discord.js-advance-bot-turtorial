@@ -1,13 +1,14 @@
-onst {
+const {
     Collection,
     Client,
     MessageEmbed,
     Message,
     Intents,
   } = require("discord.js");
+const chalk = require(`chalk`);
   require("discord-reply");
   const client = new Client({
-      disableMentions: "everyone",
+      disableMentions: "here",
   });
   require('discord-buttons')(client)
   const path = require("path");
@@ -31,7 +32,6 @@ onst {
     connectTimeoutMS: 10000,
     family: 4,
   };
-  const chalk = require(`chalk`);
   const { connect } = require("mongoose");
   connect(config.mongo, dbOptions).then(() => {
     console.log(
@@ -41,4 +41,4 @@ onst {
   
   client.login(config.token);
 
-  // code link in description
+  
